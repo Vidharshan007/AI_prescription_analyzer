@@ -1,0 +1,35 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AI Prescription Analyzer</title>
+</head>
+<body>
+    <h2>Upload Doctor's Prescription</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="prescription" accept=".jpg,.jpeg,.png,.pdf" required>
+        <br><br>
+        <button type="submit">Upload Prescription</button>
+    </form> 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+
+<h1>Prescription Result Page</h1>
+
+<h2>Uploaded Image</h2>
+<img src="{{ url_for('static', filename='uploads/' + filename) }}" width="300">
+
+<h2>Extracted Text</h2>
+<p>{{ text }}</p>
+
+<br>
+<a href="/">Upload Another</a>
+
+</body>
+</html>
