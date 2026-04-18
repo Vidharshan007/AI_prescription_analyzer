@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Upload Result</title>
+    <title>Result</title>
 </head>
 <body>
-    <h2> Prescription Uploaded Successfully</h2>
-    <p>File name:{{ result }}</p>
-    <h3>Extracted Text:</h3>
-    <pre>{{ text }}</pre>
-    <a href="/">Upload another prescription</a>
+
+<h1>Prescription Result Page</h1>
+
+<h2>Uploaded Image</h2>
+<img src="{{ url_for('static', filename='uploads/' + filename) }}" width="300">
+
+<h2>Extracted Text</h2>
+
+<pre>
+{{ extracted_text }}
+</pre>
+
+<br>
+<a href="/">Upload Another</a>
+
 </body>
 </html>
